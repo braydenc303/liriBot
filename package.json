@@ -1,0 +1,27 @@
+{
+  "name": "liriBot",
+  "version": "1.0.0",
+  "description": "A simple digital assistant.",
+  "main": "liri.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "moment": "^2.22.2",
+    "node-spotify-api": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braydenc303/liriBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braydenc303/liriBot/issues"
+  },
+  "homepage": "https://github.com/braydenc303/liriBot#readme"
+}
