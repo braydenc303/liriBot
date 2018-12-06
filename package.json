@@ -1,15 +1,8 @@
 {
-  "name": "liriBot",
+  "name": "liribot",
   "version": "1.0.0",
-  "description": "A simple digital assistant.",
+  "description": "A simple digital personal assistant",
   "main": "liri.js",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "dotenv": "^6.2.0",
-    "moment": "^2.22.2",
-    "node-spotify-api": "^1.0.7"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,11 +10,22 @@
     "type": "git",
     "url": "git+https://github.com/braydenc303/liriBot.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "assistant",
+    "movies",
+    "concerts",
+    "music"
+  ],
+  "author": "Brayden Copley",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/braydenc303/liriBot/issues"
   },
-  "homepage": "https://github.com/braydenc303/liriBot#readme"
+  "homepage": "https://github.com/braydenc303/liriBot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "moment": "^2.22.2",
+    "node-spotify-api": "^1.0.7"
+  }
 }

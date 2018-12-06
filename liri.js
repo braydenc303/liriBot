@@ -1,9 +1,10 @@
-var dot = require("dotenv").config();
+require("dotenv").config();
 var axios = require("axios");
 var fs = require("fs");
 var keys = require("./keys");
 var moment = require("moment");
-// var spotify = new Spotify(keys.spotify);
+var Spotify = require('node-spotify-api');
+var spotify = new Spotify(keys.spotify);
 
 // Take in the command and name if given and save them in variables.
 var action = process.argv[2].toLowerCase();
