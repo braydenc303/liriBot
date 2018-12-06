@@ -159,7 +159,7 @@ require("dotenv").config();
    * Step Three: Once logged in, navigate to <https://developer.spotify.com/my-applications/#!/applications/create> to register a new application to be used with the Spotify API. You can fill in whatever you'd like for these fields. When finished, click the "complete" button.
     <!-- Done -->
    * Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere, you'll need them to use the Spotify API and the [node-spotify-api package](https://www.npmjs.com/package/node-spotify-api).
-
+<!-- Done -->
 3. `node liri.js movie-this '<movie name here>'`
 
    * This will output the following information to your terminal/bash window:
