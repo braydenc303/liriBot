@@ -48,7 +48,7 @@ If you haven't written a markdown file yet, [click here for a rundown](https://g
 * Please submit the link to the Github Repository!
 
 ### Instructions
-<!-- I think this is done. -->
+<!-- Done -->
 1. Navigate to the root of your project and run `npm init -y` &mdash; this will initialize a `package.json` file for your project. The `package.json` file is required for installing third party npm packages and saving their version numbers. If you fail to initialize a `package.json` file, it will be troublesome, and at times almost impossible for anyone else to run your code after cloning your project.
 
 <!-- Done -->
@@ -103,7 +103,7 @@ SPOTIFY_SECRET=your-spotify-secret
 ```js
 require("dotenv").config();
 ```
-
+<!-- Done -->
 8. Add the code required to import the `keys.js` file and store it in a variable.
   
 * You should then be able to access your keys information like so
@@ -113,17 +113,17 @@ require("dotenv").config();
   ```
 
 9. Make it so liri.js can take in one of the following commands:
-
+    <!-- Done -->
    * `concert-this`
-
+    
    * `spotify-this-song`
-
+    <!-- Done -->
    * `movie-this`
-
+    <!-- Done -->
    * `do-what-it-says`
 
 ### What Each Command Should Do
-
+<!-- Done -->
 1. `node liri.js concert-this <artist/band name here>`
 
    * This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and render the following information about each event to the terminal:
@@ -133,7 +133,7 @@ require("dotenv").config();
      * Venue location
 
      * Date of the Event (use moment to format this as "MM/DD/YYYY")
-
+<!-- Done -->
 2. `node liri.js spotify-this-song '<song name here>'`
 
    * This will show the following information about the song in your terminal/bash window
@@ -182,7 +182,7 @@ require("dotenv").config();
      * It's on Netflix!
 
    * You'll use the `axios` package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use `trilogy`.
-
+<!-- Done -->
 4. `node liri.js do-what-it-says`
 
    * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.

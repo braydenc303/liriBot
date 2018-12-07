@@ -17,6 +17,10 @@ switch(action){
         concertThis(name);
         break;
     case "spotify-this-song":
+        if(!name){
+        // * If no song is provided then your program will default to "The Sign" by Ace of Base.
+            name = "the+sign+ace+of+base"
+        }
         spotThis(name);
         break;
     case "movie-this":
@@ -28,13 +32,13 @@ switch(action){
         break;
     case "do-what-it-says":
     // This function assumes that the second argument in RandomSource.txt will always be wrapped in "", and the first will not.
-        fs.readFile("random.txt", "utf8", function(error,data){
+        fs.readFile("random.txt", "utf8", function(error,data){ 
             if(error){
                 return console.log(error);
             };
             var request = data.split(",");
             action = request[0];
-            console.log(action);
+            // console.log(action);
             if(!request[1]){
                     name = "mr+nobody";
             } else if(request[1]){
@@ -42,7 +46,7 @@ switch(action){
             var end = name.lastIndexOf('"');
             name = (name.substring(1, end)).toLowerCase();
             };
-            console.log(name);
+            // console.log(name);
             doThis();
         });
         break;
@@ -83,9 +87,32 @@ function concertThis(name) {
     );
 };
 
-// function spotThis(name) {
-
-// };
+function spotThis(name) {
+    spotify.search({ type: 'track', query: name }, function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+        // console.log(JSON.stringify(data, null, 2)); 
+        if(data.length<10){
+            var length = data.length;
+        } else {
+            var length = 10;
+        };
+        for(i=0; i < length; i++) {
+            var title = name.toUpperCase();
+        // * This will show the following information about the song in your terminal/bash window
+        // * Artist(s)
+            console.log(`Artist: ${data.tracks.items[i].artists[0].name}`);
+        // * The song's name
+            console.log(`Song: ${data.tracks.items[i].name}`);
+        // * A preview link of the song from Spotify
+            console.log(`Preview: ${data.tracks.items[i].preview_url}`);
+        // * The album that the song is from
+            console.log(`Album: ${data.tracks.items[i].album.name}
+            `);
+        };   
+      });
+};
 
 function movieThis(name) {
     var queryUrl="http://omdbapi.com/?t=" + name + "&y=&plot=short&apikey=trilogy";
