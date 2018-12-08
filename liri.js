@@ -39,9 +39,7 @@ function concertThis(request) {
             var date = moment((response.data[i].datetime).slice(0,9), "YYYY-MM-DD");
             //The formatDate variable takes the date, and formats it to be more readable.
             var formatDate = moment(date).format("MM/DD/YYYY");
-            //The carriage return at the end of the template literal places a line between each result.
-            console.log(`Date: ${formatDate}
-            `);
+            console.log(`Date: ${formatDate}\n`);
             };
         }
     );
@@ -67,8 +65,7 @@ function spotThis(request) {
         // * A preview link of the song from Spotify
             console.log(`Preview: ${data.tracks.items[i].preview_url}`);
         // * The album that the song is from
-            console.log(`Album: ${data.tracks.items[i].album.name}
-            `);
+            console.log(`Album: ${data.tracks.items[i].album.name}\n`);
         };   
       });
 };
@@ -95,8 +92,7 @@ function movieThis(request) {
         //       * Plot of the movie.
             console.log(`Plot: ${response.data.Plot}`);
         //       * Actors in the movie.
-            console.log(`Actors: ${response.data.Actors}
-            `);
+            console.log(`Actors: ${response.data.Actors}\n`);
         //     ```
             if(request === "mr+nobody"){
         //   * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
@@ -147,8 +143,9 @@ inquirer
             .prompt([
                 {
                     type: "input",
-                    message: "What is the name of the artist you would like to see?",
-                    name: "name"
+                    message: "What is the name of the artist you would like to see? The default is:",
+                    name: "name",
+                    default: "Cowboy Mouth"
                 }
             ])
             .then(function(response){
@@ -162,8 +159,9 @@ inquirer
             .prompt([
                 {
                     type: "input",
-                    message: "What is the name of the song you would like to know about?",
-                    name: "name"
+                    message: "What is the name of the song you would like to know about? The default is:",
+                    name: "name",
+                    default: "Yesterday"
                 }
             ])
             .then(function(response){
@@ -177,8 +175,9 @@ inquirer
             .prompt([
                 {
                     type: "input",
-                    message: "What is the name of the movie you would like to know about?",
-                    name: "name"
+                    message: "What is the name of the movie you would like to know about? The default is:",
+                    name: "name",
+                    default: "Mr Nobody"
                 }
             ])
             .then(function(response){
@@ -213,7 +212,7 @@ inquirer
     });
 
 
-// The following code was used before inquirer was implemented.
+// The following code was used before inquirer was implemented. This is being kept due to the current inquirer bug I am experiencing.
 // Call the correct function depending upon what command is given.
 // switch(action){
 //     case "concert-this":
