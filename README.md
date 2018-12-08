@@ -1,7 +1,11 @@
 # liriBot
 A simple digital assistant.
 
-Here were the assignment instructions:
+This is a link to a short video demonstrating the workflow of the program. It will need to be downloaded to view, due to its size.
+
+https://github.com/braydenc303/liriBot/blob/master/assets/liriBot.mp4
+
+Here are the assignment instructions along with my notes.
 # LIRI Bot
 
 ### Overview
@@ -191,6 +195,7 @@ require("dotenv").config();
 
      * Edit the text in random.txt to test out the feature for movie-this and concert-this.
 
+<!-- I did not do this bonus, but I did incorporate inquirer for a better user workflow. -->
 ### BONUS
 
 * In addition to logging the data to your terminal/bash window, output the data to a .txt file called `log.txt`.
