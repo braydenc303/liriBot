@@ -1,7 +1,11 @@
 # liriBot
 A simple digital assistant.
 
-This is a link to a short video demonstrating the workflow of the program. It will need to be downloaded to view, due to its size.
+Below is a link to a short video demonstrating the workflow of the program. 
+
+![Liri Gif](./assets/images/liri.gif)
+
+The following link is a short video with a voice-over explanation of the workflow as well. It will need to be downloaded due to the filesize.
 
 https://github.com/braydenc303/liriBot/blob/master/assets/liriBot.mp4
 
@@ -16,7 +20,8 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 1. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
-<!-- I called mine liriBot -->
+*I called mine liriBot.
+
 2. Make a new GitHub repository called liri-node-app and clone it to your computer.
 
 3. To retrieve the data that will power this app, you'll need to send requests using the `axios` package to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.

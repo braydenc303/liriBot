@@ -20,8 +20,8 @@ function concertThis(request) {
     var queryUrl="https://rest.bandsintown.com/artists/" + request + "/events?app_id=codingbootcamp"
     // * This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and 
     axios.get(queryUrl).then(
-        //I think if this were rewritten as an arrow function the variable "that" would not be needed.
         function(response) {
+            // Though this could be written with .slice to limit results, it would not handle situations with less than 10 results.
             if((response.data).length<10){
                 var length = response.data.length;
             } else {
